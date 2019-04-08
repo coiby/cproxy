@@ -1,0 +1,2 @@
+include cproxy/rules
+include cproxy/sites_template.db

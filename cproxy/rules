@@ -1,0 +1,11 @@
+!comment
+!some resources can be uniquely identified by some keys or even a specefic url pattern
+www.youtube.com/get_video_info video_id
+www.youtube.com/watch v
+! meaning of itag check [Formats and Resolutions of Youtube Videos - GenYoutube](https://www.genyoutube.net/formats-resolution-youtube-videos.html)
+! id doesn't appear to be associated with video_id as in youtube.com/watch?v={video_id}
+! range and clen is optional. If a request's parameters include (doesn't include) range, the cache must (not) include the range.
+*.googlevideo.com/videoplayback  id,range,clen,mime,itag
+www.youtube.com/api/timedtext v,caps,asr,lang,fmt,tlang
+www.googleapis.com/youtube/v3/videos video_id
+www.coursera.org/api/subtitleAssetProxy.v1/* 
