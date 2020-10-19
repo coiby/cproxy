@@ -6,6 +6,7 @@ import os
 import select
 import zlib
 
+import gzip
 import brotli
 
 import time
@@ -229,7 +230,7 @@ class Response(HTTPMSG):
             text = data
 
         elif encoding in ('gzip', 'x-gzip'):
-            text = zlib.decompress(data, 16 + zlib.MAX_WBITS)
+            text = gzip.decompress(data)
         elif encoding == 'deflate':
             try:
                 text = zlib.decompress(data)
