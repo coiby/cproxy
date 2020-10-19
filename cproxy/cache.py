@@ -16,6 +16,7 @@ import threading
 import time
 import re
 import shutil
+from pathlib import Path
 from . import httptools
 
 CACHE_DIR_NAMESPACE = "CachingProxy"
@@ -310,6 +311,9 @@ class CacheManager(object):
     """
 
     def __init__(self, opts):
+        if not os.path.isdir(opts.cache_dir):
+            Path(opts.cache_dir).mkdir(parents=True, exist_ok=True)
+
         database = os.path.join(opts.cache_dir, 'sites.db')
         self.opts = opts
         if not os.path.isfile(database):

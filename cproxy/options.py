@@ -69,8 +69,8 @@ def parseOpts(argv):
         '--cache_dir',
         dest='cache_dir',
         action='store',
-        default='',
-        help='where to store caches')
+        default='cache_py',
+        help='where to store caches, default to cache_py')
 
     parser.add_argument(
         '-p',

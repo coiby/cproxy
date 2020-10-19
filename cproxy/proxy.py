@@ -40,9 +40,6 @@ except AttributeError:
 
 # For unstable network, TIMEOUT should be set to be larger value
 TIMEOUT = 10
-CACHE_DIR = "/data/coiby/other/cache_py/"
-database = CACHE_DIR + "sites.db"
-
 
 class Request(HTTPMSG):
     def __init__(self, req):
