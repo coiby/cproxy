@@ -9,7 +9,7 @@ import zlib
 import brotli
 
 import time
-from http.client import HTTPResponse, _UNKNOWN, MAXAMOUNT, IncompleteRead
+from http.client import HTTPResponse, _UNKNOWN, IncompleteRead
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from socketserver import ThreadingMixIn
 from urllib.parse import urlparse, ParseResult, urlunparse, parse_qsl
@@ -26,6 +26,8 @@ import hashlib
 
 from .cache import CacheManager
 from .httptools import HTTPMSG
+
+MAXAMOUNT = 1048576
 
 __all__ = ['CAAuth', 'ProxyHandle', 'Request', 'Response']
 
